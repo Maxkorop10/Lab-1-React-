@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monobank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+
+    <section class="card">
+        <div class="card_header">
+            <img src="https://send.monobank.ua/img/logo_short.png" class="short-logo" alt="monobank logo">
+
+            <div class="jar">
+                <img class="jar_bg" src="https://send.monobank.ua/img/jar_bg.png" />
+                <img class="jar_glass" src="https://send.monobank.ua/img/jar/uah_50.png"/>
+                
+                <div class="grid_numbers">
+                    <img src="https://send.monobank.ua/img/jar/grid.png" class="grid">
+                    <div class="jar_grid jar_goal">250&nbsp;000</div>
+                    <div class="jar_grid jar_middle">125&nbsp;000</div>
+                    <div class="jar_grid jar_bottom">0</div>
+                </div>
+                
+                <p class="jar_owner">Артем К. збирає</p>
+                <p class="jar_name">На ремонт медеваку</p>
+            </div>
+
+            <div class="card_info">
+                <p>Збираємо на ремонт медеваку для<br>4ОТБР танкова бригада.</p>
+                <br>
+                <p>Ремонтуємо 2 автівки - Тойоту та Нісан.</p>
+                <br>
+                <p>У бригаді є наші земляки з Черкащини!</p>
+                <br>
+                <p>Ремонт авто треба на вчора! Прохання підтримати!</p>
+            </div>
+
+            <div class="stats">
+                <div class="stats-data">
+                    <img src="https://send.monobank.ua/img/collected.svg" class="stats-data_icon">
+                    <div class="stats-data_text-container">
+                        <div class="stats-data_label">Накопичено</div>
+                        <div id="current-wallet" class="stats-data_value">7&nbsp;700&nbsp;₴</div>
+                    </div>
+                </div>
+
+                <div class="stats-data"><img src="https://send.monobank.ua/img/target.svg" class="stats-data_icon">
+                  <div class="stats-data_text-container">
+                    <div class="stats-data_label">Ціль</div>
+                    <div class="stats-data_value">25&nbsp;000&nbsp;₴</div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card_body">
+            <div class="body_elements">
+                <div class="gradient">
+                    <div class="elipse_background">
+    
+                        <div class="elipse-text">
+                            <p>Сума поповнення</p>
+                            <img class="dollar" src="https://send.monobank.ua/img/money.png" alt="money"/>
+                        </div>
+
+                        <div class="money-donation-input">
+                            <input type="number" min="5" max="25000" value="0" placeholder="0" сontent="$" id="money-amount" oninput="changeColor()"/>
+                        </div>
+    
+                        <div id="dollar" oninput="changeColor()" class="money_symbol">
+                            ₴
+                        </div>
+    
+                        <div id="wrong-value" class="wrong_value">
+                            Сумма повинна бути від 5&nbsp;₴ до 25 000&nbsp;₴
+                        </div>
+    
+                        <div id="donate-btns" class="donate_buttons">
+                            <button id="add-100" type="button" class="add_button">
+                                +100&nbsp;₴
+                            </button>
+                            <button id="add-500" type="button" class="add_button">
+                                +500&nbsp;₴
+                            </button>
+                            <button id="add-1000" type="button" class="add_button">
+                                +1000&nbsp;₴
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="name_form">
+                <input id="user-name" class="text_field" autocomplete="cc-name">
+                <label class="data_text">Ваше ім'я (необов'язково)</label>
+            </div>
+
+            <div class="comment_form">
+                <input id="comment" class="text_field" autocomplete="off">
+                <label class="data_text">Коментар (необов'язково)</label>
+            </div>
+
+            <div class="MonoPay_btn" id="mono-btn">
+                <img src="https://send.monobank.ua/img/mono_pay.svg" class="mono_btn">
+            </div>
+
+            <div class="GooglePay_btn" id="google-btn">
+                <img src="https://www.gstatic.com/instantbuy/svg/dark_gpay.svg" class="gpay_btn">
+            </div>
+
+            <div id="menu-activator" class="card_payment_block">
+                <hr id="hideHr" class="split" />
+
+                <div class="pay_by_card_btn" id="pay-by-card">
+                    <img src="https://send.monobank.ua/img/card.svg" class="card_logo">
+                    <label class="pay_by_card_label">Оплатити карткою</label>
+                </div>
+            </div>
+
+            <div id="hidden-menu" class="hidden_menu">
+                <div class="pay_by_card">
+                    <hr class="split_line" />
+                    <p class="update_text">або уведіть дані картки</p>
+                    <hr class="split_line" />
+                </div>
+
+                <div class="donaters_data">
+                    <input id="card-number-line" class="text_field" data-role="number" autocomplete="cc-name">
+                    <label class="data_text">Номер картки</label>
+                </div>
+
+                <div class="text_field superfield">
+                    <input class="personal_data" autocomplete="cc-name" placeholder="Місяць"/>
+                    
+                    <hr class="vertical_split" />
+                    
+                    <input class="personal_data" autocomplete="cc-name" placeholder="Рік"/>
+                    
+                    <hr class="vertical_split" />
+
+                    <input class="personal_data" autocomplete="cc-name" placeholder="CVC2"/>
+                </div>
+
+                <div class="pay_btn">
+                    <button class="pay_button">Поповнити банку</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="additional_info">
+            <div class="bank_info">АТ «УНІВЕРСАЛ БАНК» Ліцензія НБУ №92 від <br>
+                20.01.1994, у держреєстрі банків №226</div>
+
+            <div class="additional_buttons">
+                <div class="event footer_btns">
+                    <img class="event_pic" src="https://send.monobank.ua/img/cup.svg">
+                    <label class="event_label">Провести розіграш</label>
+                </div>
+    
+                <div class="stream footer_btns">
+                    <img class="event_pic" src="https://send.monobank.ua/img/gamepad.svg">
+                    <label class="event_label">Віджет для стрімів</label>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

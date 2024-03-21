@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(137,83,171);
+    background: linear-gradient(90deg, rgba(137,83,171,1) 0%,
+     rgba(162,103,191,1) 49%, rgb(196, 150, 216) 100%) no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font-family: 'Inter', 'LatoWeb', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    background-color: white;
+    display: flex;
+    min-height: 680px;
+    max-width: 980px;
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-top: 45px;
+    /* margin-bottom: 0; + */
+    /* padding-bottom: 0; + */
+    position: relative;
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+
+.card_header, .card_body {
+    width: 50%;
+    padding: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_header {
+    background: #f3f4f6;
+}
+  
+.card .short-logo {
+    margin-bottom: 32px;
+}
+  
+.card_info {
+    padding: 0 25px;
+}
+  
+.card_info p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+}
+  
+/* -- Jar -- */
+  
+.jar {
+    position: relative;
+    text-align: center;
+}
+  
+.jar_bg {
+    width: 215px;
+    height: 215px;
+    margin-bottom: 20px;
+}
+  
+.jar_glass {
+    height: 203px;
+    width: 155px;
+    left: 35px;
+    top: 10px;
+    position: absolute;
+}
+
+.grid_numbers {
+    position: absolute;
+    top: 26px;
+    left: 13px;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+.grid {
+    width: 42px;
+    height: 168px;
+    background-size: cover;
+}
+
+.jar_grid {
+    font-weight: 800;
+    font-size: 10px;
+    color: #8e5b5b;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.jar_goal {
+    bottom: 157px;
+    left: 16px;
+}
+
+.jar_middle {
+    bottom: 83px;
+    left: 5px;
+}
+
+.jar_bottom {
+    bottom: 8px;
+    left: 7px;
+}
+
+.jar_owner {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 4px;
+}
+  
+.jar_name {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+  
+/* -- Statistic -- */
+  
+.stats {
+    margin-top: 16px;
+    display: flex;
+    background: #fff;
+    border-radius: 16px;
+}
+  
+.stats-data {
+    display: flex;
+    gap: 12px;
+    padding: 0 20px;
+    margin: 12px 0;
+}
+  
+.stats-data:not(:last-child) {
+    border-right: solid #ccc 0.5px;
+}
+  
+.stats-data_label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #808080;
+}
+  
+.stats-data_value {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+/* -- Second page -- */
+
+.body_elements {
+    display: inline;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -- Donation form -- */
+
+.gradient {
+    background: linear-gradient(90deg, rgba(59,178,255,1) 0%,
+     rgba(162,103,191,1) 49%, rgba(190,35,174,1) 100%) no-repeat;
+    height: 216px;
+    width: 393px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 48px;
+    right: 50px;
+    margin-bottom: 32px;
+}
+
+.elipse_background {
+    background-color: #fff;
+    height: 211px;
+    width: 388px;
+    border-radius: 22px;
+}
+
+.elipse-text {
+    font-size: 14px;
+    color: #121214;
+    font-family: 'Inter', 'LatoWeb', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+    padding-top: 24px;
+    display: flex;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.dollar {
+    display: flex;
+    width: 16px;
+    margin-left: 0.5em;
+    margin-bottom: 20px;
+}
+
+/* -- Input form -- */
+
+.money_container {
+    justify-content: center;
+}
+
+.money-donation-input {
+    display: inline;
+    padding-left: 44px;
+    font-weight: 700;
+    font-family: 'Inter', 'LatoWeb', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input[type='number'] {
+    /* color: #000000; */
+    text-align: right;
+    color: #c794d5;
+    border: none;
+    outline: none;
+    font-size: 48px;
+    font-weight: 700;
+    width: 150px;
+    margin-right: 10px;
+    /* -moz-appearance: textfield; */
+    appearance: textfield;
+    margin-right: 0;
+}
+
+/* input[type='number']::placeholder {
+    color: #c794d5;
+} */
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.money_symbol {
+    display: inline;
+    font-size: 48px;
+    padding-left: 42px;
+    font-weight: 700;
+    font-family: 'Inter', 'LatoWeb', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #c794d5;
+    padding: 0;
+    text-align: center;
+}
+
+.wrong_value {
+    display: none;
+    color: #5a5a5a;
+    font-size: 12px;
+    justify-content: center;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* -- Donation buttons -- */
+
+.donate_buttons {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.add_button {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 0 3px;
+    text-align: center;
+    margin: 0 8px;
+    border-radius: 16px;
+    min-height: 40px;
+    min-width: 102px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Inter', 'LatoWeb', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add_button:hover {
+    border: 1px solid #b5b5b5;
+    background-color: #cccccc78;
+    cursor: pointer;
+}
+
+/* -- Full name & comment form -- */
+
+.name_form, .comment_form {
+    /* max-width: 320px; */
+    /* width: 100%; */
+    margin-left: auto;
+    margin-right: auto; 
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 16px;
+    background: transparent;
+    height: 56px;
+    position: relative; 
+}
+
+.text_field {
+    text-align: left;
+    font-size: 16px;
+    color: #000000;
+    background: none;
+    height: 56px;
+    max-width: 320px;
+    width: 100%;
+    margin-left: auto;
+    margin-left: 32px;
+    margin-right: auto;
+    /* margin-bottom: 16px; */
+    border-radius: 16px;
+    border: 1px solid #ccc;
+    line-height: 24px;
+    padding: 0 10px;
+}
+
+.data_text {
+    cursor: default;
+    text-align: left;
+    color: #757575;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    top: -43px;
+    padding: 0 42px;
+    transition-duration: 100ms;
+}
+
+.data_text.inputed {
+    font-size: 12px;
+    top: -60px;
+}
+
+.data_text:hover, 
+.text_field:hover + .data_text,
+.text_field:focus + .data_text {
+    font-size: 12px;
+    cursor: default;
+    text-align: left;
+    color: #757575;
+    line-height: 24px;
+    position: relative;
+    top: -60px;
+}
+
+/* -- GPay & Mono Buttons -- */
+
+.MonoPay_btn {
+    display: flex;
+    height: 48px;
+    margin-bottom: 16px;
+    width: 340px;
+    border-radius: 8px;
+    background: #000;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.GooglePay_btn {
+    display: flex;
+    height: 48px;
+    width: 340px;
+    border-radius: 8px;
+    background: #000;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mono_btn {
+    height: 26px;
+    width: 103px;
+}
+
+.gpay_btn {
+    height: 26px;
+    width: 66px;
+}
+
+/* -- Another Payment -- */
+
+.card_payment_block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 340px;
+    /* margin-bottom: 42px; */
+}
+
+.split {
+    margin-bottom: 8px;
+    color: #525252;
+    size: 0.5px;
+    width: 340px;
+    margin-top: 24px;
+}
+
+.pay_by_card_btn {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    width: 100%;
+    line-height: 24px;
+    /* padding: 8px; */
+    transition: background 0.2s;
+    border-radius: 8px;
+}
+
+.card_logo {
+    width: 16px;
+    height: 26px;
+    margin-right: 8px;
+}
+
+.pay_by_card_label {
+    font-size: 14px;
+    color: #e85e5b;
+    font-weight: 600;
+    line-height: 24px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* -- Hidden Menu -- */
+
+#hidden-menu {
+    display: none;
+}
+
+.pay_by_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-top: 20px;
+}
+
+.split_line {
+    width: 75px;
+    height: 0.1px;
+}
+
+.update_text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 0 10px;
+}
+
+/* -- Super field -- */
+
+.superfield {
+    display: flex;
+    align-items: center;
+}
+  
+.personal_data {
+    border: none;
+    width: 90px;
+    height: 56px;
+    text-align: left;
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.personal_data:focus {
+    outline: none;
+}
+
+.vertical_split {
+    height: 35px;
+    margin-right: 20px;
+}
+
+/* -- Pay button -- */
+
+.pay_btn {
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.pay_button {
+    font-size: 16px;
+    height: 56px;
+    color: #fff;
+    background-color: #fdb9bb;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    font-weight: 600;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 346px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    /* padding: 0 16px; */
+    cursor: pointer;
+}
+
+/* -- Footer */
+
+.additional_info {
+    display: flex;
+    width: 990px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    color: #fff;
+}
+
+.bank_info {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    opacity: 0.8;
+}
+
+.additional_buttons {
+    display: flex;
+}
+
+.footer_btns {
+    background-color: rgba(255, 255, 255, 0.126);
+    border: 0.5px solid rgba(255, 255, 255, 0.4);
+    height: 40px;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 8px;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 18px;
+    margin-right: 16px;
+}
+
+.event_pic {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.footer_btns:hover {
+    background-color: #ffffff3a;
+    cursor: pointer;
+}
+
+/* .event {
+    margin-right: 16px;
+} */
